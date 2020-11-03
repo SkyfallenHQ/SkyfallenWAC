@@ -45,7 +45,6 @@ if(isset($_GET["app"])){
     <body>
         <div class="heading-box">
             <h1 class="heading-txt">Skyfallen Web App Center</h1>
-            <br>
             <h2 class="overview-txt"> Welcome, <?= $_SESSION["username"] ?> | <a href="/?logout=true">Log out</a></h2>
         </div>
         <div class="app-picker">
