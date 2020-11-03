@@ -10,19 +10,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 if(isset($_GET["app"])){
     if($_GET["app"] == "1"){
         $token = SkyfallenCodeLibrary\SkyfallenTokenExchanger::createToken($tokenlink,$_SESSION["username"]);
-        header("location: https://updatesconsole.theskyfallen.com/?swac_logintoken=".$token);
+        header("location: https://updatesconsole.theskyfallen.com/?swac_tokenlogin=".$token);
     }
     if($_GET["app"] == "2"){
         $token = SkyfallenCodeLibrary\SkyfallenTokenExchanger::createToken($tokenlink,$_SESSION["username"]);
-        header("location: https://appcenter.theskyfallen.com/?swac_logintoken=".$token);
+        header("location: https://appcenter.theskyfallen.com/?swac_tokenlogin=".$token);
     }
     if($_GET["app"] == "3"){
         $token = SkyfallenCodeLibrary\SkyfallenTokenExchanger::createToken($tokenlink,$_SESSION["username"]);
-        header("location: https://id.theskyfallen.com/?swac_logintoken=".$token);
+        header("location: https://id.theskyfallen.com/?swac_tokenlogin=".$token);
     }
     if($_GET["app"] == "4"){
         $token = SkyfallenCodeLibrary\SkyfallenTokenExchanger::createToken($tokenlink,$_SESSION["username"]);
-        header("location: https://giris.kucukrobotcuk.com/auth/?redirect_to=https%3A%2F%2Fgiris.kucukrobotcuk.com%2F%3Foauth%3Dauthorize%26response_type%3Dcode%26client_id%3DNmwPmeMukgWsttcdHMyaJzTJWM8sAdIPPldmZM7j%26client_secret%3DG2FBFH9ZI2ADafuqJo9t0bAJhBtFf1lrbhEosuf8%26redirect_uri%3Dhttps%253A%252F%252Fwww.kucukrobotcuk.com%252F%253Fauth%253Dsso%26state%3Dhttps%253A%252F%252Fwww.kucukrobotcuk.com&swac_logintoken=".$token);
+        header("location: https://giris.kucukrobotcuk.com/auth/?redirect_to=https%3A%2F%2Fgiris.kucukrobotcuk.com%2F%3Foauth%3Dauthorize%26response_type%3Dcode%26client_id%3DNmwPmeMukgWsttcdHMyaJzTJWM8sAdIPPldmZM7j%26client_secret%3DG2FBFH9ZI2ADafuqJo9t0bAJhBtFf1lrbhEosuf8%26redirect_uri%3Dhttps%253A%252F%252Fwww.kucukrobotcuk.com%252F%253Fauth%253Dsso%26state%3Dhttps%253A%252F%252Fwww.kucukrobotcuk.com&swac_tokenlogin=".$token);
     }
     if($_GET["app"] == "5"){
         $token = SkyfallenCodeLibrary\SkyfallenTokenExchanger::createToken($tokenlink,$_SESSION["username"]);
@@ -30,7 +30,7 @@ if(isset($_GET["app"])){
     }
     if($_GET["app"] == "6"){
         $token = SkyfallenCodeLibrary\SkyfallenTokenExchanger::createToken($tokenlink,$_SESSION["username"]);
-        header("location: https://login.theskyfallen.com/auth/?redirect_to=https%3A%2F%2Flogin.theskyfallen.com%2F%3Foauth%3Dauthorize%26response_type%3Dcode%26client_id%3D3GqQ6hyGQeyoj2UQ0psXsKKQUJZ1sYXX6mKzOgh7%26client_secret%3DZ6iltHoj2dYLoJYo3Vckxn9T3lSDgdJiIc9At5BxI%26redirect_uri%3Dhttps%253A%252F%252Fwww.theskyfallen.com%252F%253Fauth%253Dsso%26state%3Dhttps%253A%252F%252Fwww.theskyfallen.com&swac_logintoken=".$token);
+        header("location: https://login.theskyfallen.com/auth/?redirect_to=https%3A%2F%2Flogin.theskyfallen.com%2F%3Foauth%3Dauthorize%26response_type%3Dcode%26client_id%3D3GqQ6hyGQeyoj2UQ0psXsKKQUJZ1sYXX6mKzOgh7%26client_secret%3DZ6iltHoj2dYLoJYo3Vckxn9T3lSDgdJiIc9At5BxI%26redirect_uri%3Dhttps%253A%252F%252Fwww.theskyfallen.com%252F%253Fauth%253Dsso%26state%3Dhttps%253A%252F%252Fwww.theskyfallen.com&swac_tokenlogin=".$token);
     }
     exit;
 }
