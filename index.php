@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" and $_GET["action"] == "register" and AL
         // Prepare a select statement
         $sql = "SELECT id FROM users WHERE username = ?";
 
-        if($stmt = mysqli_prepare($loginlink, $sql)){
+        if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_username);
 
@@ -82,7 +82,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" and $_GET["action"] == "register" and AL
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password,verified,token) VALUES (?, ?, 'NO', '".md5(uniqid(rand(), true))."')";
 
-        if($stmt = mysqli_prepare($loginlink, $sql)){
+        if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
 

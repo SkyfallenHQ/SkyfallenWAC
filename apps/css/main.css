@@ -24,7 +24,7 @@
     margin-top: 50px;
     text-align: center;
     font-family: sans-serif;
-    margin-bottom: 200px;
+    margin-bottom: 10px;
 }
 .app-picker {
     width: 494px;
@@ -33,4 +33,9 @@
 }
 a {
     text-decoration: none;
+}
+overview-txt {
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 200px;
 }

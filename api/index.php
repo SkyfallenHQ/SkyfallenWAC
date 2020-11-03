@@ -38,7 +38,7 @@ if ($_POST["action"] == "login") {
         // Prepare a select statement
         $sql = "SELECT id, username, password FROM users WHERE username = ?";
 
-        if ($stmt = mysqli_prepare($loginlink, $sql)) {
+        if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_username);
 
@@ -92,7 +92,7 @@ if ($_POST["action"] == "login") {
     }
 
     // Close connection
-    mysqli_close($loginlink);
+    mysqli_close($link);
 }
 if ($_POST["action"] == "logout") {
     session_name("DeveloperIDSession");
