@@ -137,7 +137,7 @@ if($_GET["logout"] == "true"){
                 });
                 $(".titleo").fadeIn(1000);
                 $(".titleo").fadeOut(2000,function (){
-                    $(".titleo").html("Sign in - Skyfallen Updates Console");
+                    $(".titleo").html("Sign in to SWAC");
                 });
                 $(".titleo").fadeIn(1000);
             })
@@ -158,7 +158,7 @@ if($_GET["logout"] == "true"){
                 <img src="https://theskyfallen.company/wp-content/uploads/2020/07/IMG_0183.png" style="height: 100px;">
             </div>
             <div class="field text-center">
-                <h3 class="titleo"><?php if($_GET["action"] != "register"){ echo "Sign in  to Skyfallen Updates Console"; } else { echo "Sign up  to Skyfallen Updates Console"; } ?></h3>
+                <h3 class="titleo"><?php if($_GET["action"] != "register"){ echo "Sign in to SWAC"; } else { echo "Sign up - SWAC"; } ?></h3>
             </div>
             <div class="field">
                 <input type="text" required autocomplete="off" id="username" name="username" style="border-radius: 10px 10px 0px 0px;">
