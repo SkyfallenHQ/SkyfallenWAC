@@ -10,7 +10,7 @@ class SkyfallenTokenExchanger
         $sql = "DELETE FROM token WHERE token='".$token."'";
         mysqli_query($link,$sql);
     }
-    public static function createToken($link,$username,$command = "LOGIN",$permission = "LO",$valid = "60",$creator = "TokenExchangerLibrary"){
+    public static function createToken($link,$username,$command = "LOGIN",$permission = "LO",$valid = 60,$creator = "TokenExchangerLibrary"){
         $token = md5(uniqid(rand(), true));
         $sql = "INSERT INTO token (token,username,command,permission,creation,expire,creator) VALUES ('".$token."','".$username."','".$command."','".$permission."','".time()."','".time() + $valid."','".$creator."')";
         mysqli_query($link,$sql);
