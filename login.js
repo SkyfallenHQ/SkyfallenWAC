@@ -48,7 +48,7 @@ function onpagloadcheck(){
             var delayInMilliseconds = 1000; //1 second
 
             setTimeout(function() {
-                window.location.href = "/dashboard/";
+                window.location.href = "/apps/";
             }, delayInMilliseconds);
         }
     }
