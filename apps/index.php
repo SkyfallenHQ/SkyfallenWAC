@@ -1,6 +1,8 @@
 <?php
 require_once "../SkyfallenCodeLib/SkyfallenTokenExchanger.php";
 require_once "../SWAC_Config.php";
+session_name("DeveloperIDSession");
+session_start();
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: /");
     exit;
