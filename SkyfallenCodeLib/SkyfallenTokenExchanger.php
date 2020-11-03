@@ -14,6 +14,7 @@ class SkyfallenTokenExchanger
         $token = md5(uniqid(rand(), true));
         $sql = "INSERT INTO token (token,username,command,permission,creation,expire,creator) VALUES ('".$token."','".$username."','".$command."','".$permission."','".time()."','".time() + $valid."','".$creator."')";
         mysqli_query($link,$sql);
+        echo mysqli_error($link);
         return $token;
     }
 }
