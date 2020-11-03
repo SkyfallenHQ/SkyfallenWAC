@@ -12,7 +12,8 @@ class SkyfallenTokenExchanger
     }
     public static function createToken($link,$username,$command = "LOGIN",$permission = "LO",$valid = 60,$creator = "TokenExchangerLibrary"){
         $token = md5(uniqid(rand(), true));
-        $sql = "INSERT INTO token (token,username,command,permission,creation,expire,creator) VALUES ('".$token."','".$username."','".$command."','".$permission."','".time()."','".time() + $valid."','".$creator."')";
+        $expire = time() + $valid;
+        $sql = "INSERT INTO token (token,username,command,permission,creation,expire,creator) VALUES ('".$token."','".$username."','".$command."','".$permission."','".time()."','".$expire."','".$creator."')";
         mysqli_query($link,$sql);
         echo $sql." - ".mysqli_error($link);
         die();
