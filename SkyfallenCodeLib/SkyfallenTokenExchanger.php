@@ -15,8 +15,6 @@ class SkyfallenTokenExchanger
         $expire = time() + $valid;
         $sql = "INSERT INTO token (token,username,command,permission,creation,expire,creator) VALUES ('".$token."','".$username."','".$command."','".$permission."','".time()."','".$expire."','".$creator."')";
         mysqli_query($link,$sql);
-        echo $sql." - ".mysqli_error($link);
-        die();
         return $token;
     }
 }
