@@ -55,7 +55,7 @@ if ($_POST["action"] == "login") {
                     // Bind result variables
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password,$verified);
                     if (mysqli_stmt_fetch($stmt)) {
-                        if(strcasecmp($verified,'yes')){
+                        if(strcasecmp($verified,'yes')===0){
                             if (password_verify($password, $hashed_password)) {
                                 // Password is correct, so start a new session
                                 session_start();
