@@ -153,6 +153,7 @@ if($_GET["logout"] == "true"){
     ?>
     <script>
         $(document).ready(function() {
+            $("#form").fadeIn(3000);
             $(".titleo").fadeOut(400,function (){
                 $(".titleo").html("Welcome to Skyfallen Web App Center");
             });
@@ -170,7 +171,7 @@ if($_GET["logout"] == "true"){
 <?php
 }
 ?>
-<form method="post" class="centered" id="form">
+<form method="post" class="centered" id="form" style="opacity: 0;">
     <div class="container centered text-center" id="outsider">
         <div id="middle">
             <div class="field text-center">
