@@ -149,6 +149,25 @@ if($_GET["logout"] == "true"){
     http.send(params);
 </script>
 <?php
+} else {
+    ?>
+    <script>
+        $(document).ready(function() {
+            $(".titleo").fadeOut(400,function (){
+                $(".titleo").html("Welcome to Skyfallen Web App Center");
+            });
+            $(".titleo").fadeIn(1000);
+            $(".titleo").fadeOut(2000,function (){
+                $(".titleo").html("Please use your Developer ID to sign in");
+            });
+            $(".titleo").fadeIn(1000);
+            $(".titleo").fadeOut(2000,function (){
+                $(".titleo").html("Sign in to SWAC");
+            });
+            $(".titleo").fadeIn(1000);
+        });
+    </script>
+<?php
 }
 ?>
 <form method="post" class="centered" id="form">
