@@ -152,6 +152,9 @@ if($_GET["logout"] == "true"){
 } else {
     ?>
     <script>
+        $("#form").fadeOut(1,function (){
+            console.log("OK");
+        });
         $(document).ready(function() {
             $("#form").fadeIn(3000);
             $(".titleo").fadeOut(400,function (){
@@ -171,7 +174,7 @@ if($_GET["logout"] == "true"){
 <?php
 }
 ?>
-<form method="post" class="centered" id="form" style="opacity: 0;">
+<form method="post" class="centered" id="form">
     <div class="container centered text-center" id="outsider">
         <div id="middle">
             <div class="field text-center">
