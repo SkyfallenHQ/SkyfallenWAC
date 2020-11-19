@@ -43,6 +43,10 @@ if(isset($_GET["app"])){
         <script type="text/javascript" src="js/main.js"></script>
     </head>
     <body>
+    <div class="top-strip">
+        <img src="https://theskyfallen.company/wp-content/uploads/2020/07/IMG_0183.png" class="top-strip-img">
+        <p class="top-strip-text">Skyfallen Developer ID Online Services</p>
+    </div>
         <div class="heading-box">
             <h1 class="heading-txt">Skyfallen Web App Center</h1>
             <h2 class="overview-txt"> Welcome, <?= $_SESSION["username"] ?> | <a href="/?logout=true">Log out</a></h2>

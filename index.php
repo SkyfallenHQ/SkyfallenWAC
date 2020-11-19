@@ -117,6 +117,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST" and $_GET["action"] == "register" and AL
 </head>
 
 <body onload="onpagloadcheck()">
+<div class="top-strip">
+    <img src="https://theskyfallen.company/wp-content/uploads/2020/07/IMG_0183.png" class="top-strip-img">
+    <p class="top-strip-text">Skyfallen Developer ID Online Services</p>
+</div>
 <?php
 if($_GET["logout"] == "true"){
 ?>
@@ -132,6 +136,7 @@ if($_GET["logout"] == "true"){
     http.onreadystatechange = function() {//Call a function when the state changes.
         if(http.readyState == 4 && http.status == 200) {
             $(document).ready(function() {
+                $("#form").fadeIn(3000);
                 $(".titleo").fadeOut(400,function (){
                     $(".titleo").html("Logged out successfully.");
                 });
